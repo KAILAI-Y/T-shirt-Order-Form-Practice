@@ -1,0 +1,143 @@
+body{
+    color:#0861A1;
+}
+
+.wrapper{
+    margin: 20px auto;
+    width: 900px;
+}
+
+.header{
+    position: relative;
+    height: 120px;
+    background: #f1cd7b;
+    border-radius:20px 20px 0px 0px;
+    box-shadow: 0 8px 0 #e5b555;
+    margin-bottom: 50px;
+}
+
+.header-logo{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius:50%;
+    left:100px;
+    top:26px;
+    box-shadow:2px 2px 10px #ccc;
+}
+
+.header-title{
+    position: absolute;
+    color:#0861A1;
+    left:230px;
+    top:-56px;
+    font-weight:400;
+    font-size: 120px;
+    text-shadow:3px 3px 0 #fff, -3px -3px #fff   
+}
+
+h1{
+    text-align: center;
+}
+
+.radios label{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #888;
+    margin-right:10px;
+    border-radius:20px;
+    overflow: hidden;
+}
+
+.radios{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.radios input[type='radio']{
+    position:absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.radios img{
+    width: 200px;
+    height: 200px;
+}
+
+.fee{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888;
+}
+
+.fee-total{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fee .row{
+    margin-bottom: 4px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.col{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.col+.col{
+    margin-left: 50px;
+}
+
+input[type='text'],[type='date']{
+    display: block;
+    width:100%;
+    height:30px;
+    border-radius:5px;
+    background-color:#f6f6f6 ;
+}
+
+select{
+    /* width: 80%; 个人感觉select的宽度为50%比较合适 */
+    width: 50%;
+    height: 30px;
+}
+
+.text{
+    color:#888;
+}
+
+.buttons {
+    display: flex;                  /*定义一个flex的父容器*/
+    flex-direction: column;         /*注意方向是竖直方向*/
+    align-items: center;            /*定义副轴方向上居中，这里就是水平方向上居中*/
+    padding-top: 10px;              /*给顶部一点空间*/
+    padding-bottom: 40px;           /*给底部一点空间*/
+}
+
+input[type='reset'] {
+    width: 80px;
+    height: 30px;
+    color: white;
+    align-self: flex-end;           /*定义这个元素按自身的对齐方式：flex-end，而不是父元素设定的align-items: center;*/
+    border-radius: 5px;
+    background: #ee1000;
+}
+
+input[type='submit'] {
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    border-radius:5px;
+    background:#8ec45c ;
+}

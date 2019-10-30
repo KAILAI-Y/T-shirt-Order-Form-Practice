@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>T-shirt Order Form</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img class="header-logo" src="image1.jpg" title="image">
+            <h1 class="header-title">Summer</h1>
+        </div>
+
+        <h1>T-SHIRT ORDER FORM</h1>
+        <h2>Select your item</h2>
+
+        <form name="myform" onsubmit="return validateForm()">
+            <div class="radios" id="radios">
+                <label><input type="radio" class="tshirt" name="T-shirt" value="19.9" checked><img src="image2.jpg" />
+                </label>
+                <label><input type="radio" class="tshirt" name="T-shirt" value="39.9"><img src="image3.jpg" />
+                </label>
+                <label><input type="radio" class="tshirt" name="T-shirt" value="9.9"><img src="image4.jpg" />
+                </label>
+                <label><input type="radio" class="tshirt" name="T-shirt" value="29.9"><img src="image5.jpg" />
+                </label>
+            </div>
+
+            <div class="row">
+                <p>CAD $19.9</p>
+                <p>CAD $39.9</p>
+                <p>CAD $9.9</p>
+                <p>CAD $29.9</p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="quantity">Quantity</label><br>
+                    <select id="quantity" name='quantity'>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="size">Size</label><br>
+                    <select id="size">
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                        <option value="xxxl">XXXL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="fee">
+                <div class="row fee-total">
+                    <div class="col">Total</div>
+                    <div class="col" id="total">$0.00</div>
+                </div>
+                <div class="row fee-subtotal">
+                    <div class="col">Subtotal</div>
+                    <div class="col" id="subtotal">$0.00</div>
+                </div>
+                <div class="row fee-tax">
+                    <div class="col">Tax</div>
+                    <div class="col" id="tax">$0.00</div>
+                </div>
+            </div>
+
+            <h3>Credit Card</h3>
+            <div class="row">
+                <div class="col">
+                    <div class="text">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <input type="text" id="fname" name="fname" placeholder="">
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <input type="text" id="lname" name="lname" placeholder=" ">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="text">
+                        <label for="ccnum">Credit card number</label>
+                    </div>
+                    <input type="text" id="ccnum" name="ccnumber" placeholder="">
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <label for="scode">Security Code</label>
+                    </div>
+                    <input type="text" id="scode" name="scode" placeholder="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="text">
+                        <label for="expmonth">Expiration Month</label>
+                    </div>
+                    <select id="expmonth">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <div class="text">
+                        <label for="expyear">Expiration Year</label>
+                    </div>
+                    <select id="expyear">
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+            </div>
+
+            <h3>Shipping Address</h3>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="saddress" name="saddress" placeholder="">
+                    <div class="text">
+                        <label for="saddress">Street Address</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="saddress2" name="saddress2" placeholder="">
+                    <div class="text">
+                        <label for="saddress2">Street Address Line 2</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="city" name="city" placeholder="">
+                    <div class="text">
+                        <label for="city">City</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <input type="text" id="state" name="state" placeholder="">
+                    <div class="text">
+                        <label for="state">State/Province</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="postal" name="postal" placeholder="">
+                    <div class="text">
+                        <label for="postal">Postal/Zip Code</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <select id="country">
+                        <option value="Canada" selected>Canada</option>
+                        <option value="USA">USA</option>
+                        <option value="China">China</option>
+                    </select>
+                    <div class="text">
+                        <label for="country">Country</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Delivery Date</h3>
+            <div class="row">
+                <div class="col">
+                    <!-- <input type="date" id="date" name="date" placeholder=""> -->
+                    <!-- input 标签都没有闭合，需要闭合，也就是要在尾部家反斜杠 -->
+                    <input type="date" id="date" name="date" placeholder="" />
+                    <div class="text">
+                        <label for="date">Date</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Email</h3>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="email" name="email" placeholder="">
+                    <div class="text">
+                        <label for="email">example@email.com</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <input type="reset" value="Clear" />
+                <input type="submit" value="Submit" />
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
